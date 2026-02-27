@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HOME SCREEN -->
+<div class="home-screen" id="homeScreen">
+    <div class="title">🎮 Tic Tac Toe Pro</div>
+    <div class="subtitle">Select Game Mode</div>
+
+    <button class="mode-btn pvp" onclick="startGame('pvp')">
+        👥 Player vs Player
+    </button>
+
+    <button class="mode-btn cpu" onclick="startGame('cpu')">
+        🤖 Computer vs Player
+    </button>
+</div>
+
+<!-- GAME SCREEN -->
+<div class="game-screen" id="gameScreen">
+    <div class="header">Tic Tac Toe Pro</div>
+    <div class="back-btn" onclick="goHome()">← Back to Home</div>
+
+    <div class="scoreboard">
+        <span>X Wins: <span id="xWins">0</span></span>
+        <span>O Wins: <span id="oWins">0</span></span>
+        <span>Draws: <span id="draws">0</span></span>
+    </div>
+
+    <div id="turnText">Player X's Turn</div>
+
+    <div class="board" id="board"></div>
+
+    <h2 id="result" class="result-text"></h2>
+
+    <div class="buttons">
+        <button class="btn" onclick="restartRound()">🔄 Restart Round</button>
+        <button class="btn" onclick="newGame()">🆕 New Game</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
